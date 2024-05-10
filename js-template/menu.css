@@ -1,15 +1,18 @@
 main#info {
+  /*idが"info"のmain要素*/
   margin-bottom: 2rem;
   border: solid 0.5rem #f0f0f0;
 }
 
 :is(#info_header, #info_footer) {
+  /*複数のセレクタをグループ化*/
   padding: 0.5rem;
   color: white;
   background-color: #5a9674;
 }
 
 #caution {
+  /*id*/
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.2;
@@ -27,6 +30,7 @@ main#info {
 }
 
 .exmark {
+  /*クラス*/
   display: inline-block;
   text-align: center;
   background-color: #cc0a0b;
@@ -45,6 +49,7 @@ main#info {
 }
 
 #info_list > div {
+  /*id「info_list」直下のdiv要素*/
   background-color: #d2fbaf;
   margin-bottom: 0.2rem;
   padding: 0.5rem;
