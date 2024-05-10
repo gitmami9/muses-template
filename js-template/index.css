@@ -1,53 +1,65 @@
 :root {
-  font-size: 16px;
-  --bg-color: #555555;
+  /*:rootはHTML文書全体のルート要素を指定*/
+  font-size: 16px; /*フォントサイズを16ピクセルに設定*/
+  --bg-color: #555555; /*--bg-colorはカスタムプロパティで、ルート要素に格納された変数
+  背景色を#555555（ダークグレー）に設定*/
 }
 
 body {
-  box-sizing: border-box;
-  background-color: #fefff2;
-  width: 430px;
-  border: solid lightgray 1px;
-  margin: 0;
-  padding: 0.5rem;
+  /*body要素に対するスタイル設定*/
+  box-sizing: border-box; /*要素の幅や高さの計算にボックスモデルのborder-boxを使用することを指定*/
+  background-color: #fefff2; /*背景色を薄いクリーム色に設定*/
+  width: 430px; /*要素の幅を固定して430ピクセルに設定*/
+  border: solid lightgray 1px; /*薄い灰色の実線の境界線を1ピクセルの幅で設定*/
+  margin: 0; /*要素の外側の余白を0に設定*/
+  padding: 0.5rem; /*要素の内側の余白を0.5レムに設定*/
 }
 
 header {
-  margin-bottom: 2rem;
+  /*header要素に対するスタイル設定*/
+  margin-bottom: 2rem; /*header要素の下側に2レムの余白を設定*/
 }
 
 figure#logo {
-  margin: 1rem 0;
+  /*figure要素でIDがlogoの要素に対するスタイル設定*/
+  margin: 1rem 0; /*上下に1レム、左右に0の余白を設定*/
 }
 
 #logo img {
-  width: 16rem;
-  height: 3rem;
+  /*IDがlogoの画像要素に対するスタイル設定*/
+  width: 16rem; /*画像の幅を16レム*/
+  height: 3rem; /*画像の高さを3レム*/
 }
 
 #user_name {
-  display: flex;
-  align-items: center;
-  background-color: #cccccc;
-  margin: 1rem 5px;
-  gap: 0.5rem;
-  width: fit-content;
-  padding-right: 1rem;
-  height: 1.7rem;
+  /*IDがuser_nameの要素に対するスタイル設定*/
+  display: flex; /*flexbox（フレックスボックス）と呼ばれるレイアウトモードを使用
+  フレックスボックスは、HTMLブロックを横並びにすることができる*/
+  align-items: center; /*要素の中央揃え*/
+  background-color: #cccccc; /*背景色を薄い灰色に設定*/
+  margin: 1rem 5px; /*上下に1レム、左右に5ピクセルの余白を設定*/
+  gap: 0.5rem; /*フレックスアイテム間の間隔を0.5レムに設定*/
+  width: fit-content; /*要素の幅を内容に合わせて調整*/
+  padding-right: 1rem; /*右側の余白を1レムに設定*/
+  height: 1.7rem; /*要素の高さを1.7レムに設定*/
 }
 
 #user_name img {
-  height: 1.5rem;
-  margin: 0.1rem;
-  background-color: var(--bg-color);
+  /*IDがuser_name内のimg要素に対するスタイル設定*/
+  height: 1.5rem; /*画像の高さを1.5レムに設定*/
+  margin: 0.1rem; /*画像の周囲に0.1レムの余白を設定*/
+  background-color: var(
+    --bg-color
+  ); /*背景色をカスタムプロパティ(--bg-color)の値に設定*/
 }
 
 #upper_menu {
-  display: flex;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  color: #330066;
-  margin: 1rem 0;
+  /*IDがupper_menuの要素に対するスタイル設定*/
+  display: flex; /*フレックスボックスを使用*/
+  font-size: 0.75rem; /*テキストのフォントサイズを0.75レムに設定*/
+  line-height: 1.2; /*行の高さを1.2に設定*/
+  color: #330066; /*テキストの色をダークパープルに設定*/
+  margin: 1rem 0; /*上下に1レム、左右に0の余白を設定*/
 }
 
 #upper_menu div {
