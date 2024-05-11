@@ -63,140 +63,170 @@ figure#logo {
 }
 
 #upper_menu div {
-  padding: 0.5rem;
-  width: 4.5rem;
-  text-align: center;
+  /*IDがupper_menu内のdiv要素に対するスタイル設定*/
+  padding: 0.5rem; /*div要素の内側の余白を0.5レムに設定*/
+  width: 4.5rem; /*div要素の幅を4.5レムに設定*/
+  text-align: center; /*div要素内のテキストを中央揃え*/
 }
 
 #upper_menu img {
-  width: 2rem;
+  /*IDがupper_menu内のimg要素に対するスタイル設定*/
+  width: 2rem; /*画像の幅を2レムに設定*/
 }
 
 #upper_menu p {
-  margin: 0;
+  /*IDがupper_menu内のp要素に対するスタイル設定*/
+  margin: 0; /*段落要素の周囲の余白を0に設定*/
 }
 
 #upper_menu div:nth-child(1) {
-  background-color: #ef8683;
+  /*IDがupper_menu内の最初のdiv要素に対するスタイル設定*/
+  background-color: #ef8683; /*背景色をピンクに設定*/
 }
 
 #upper_menu div:nth-child(2) {
-  background-color: #ffff91;
+  /*2番目*/
+  background-color: #ffff91; /*背景色を黄色に設定*/
 }
 
 #upper_menu div:nth-child(3) {
-  background-color: #ef86bd;
+  /*3番目*/
+  background-color: #ef86bd; /*背景色をラベンダー*/
 }
 
 #news {
-  background-color: #f0f0f0;
-  padding: 0.5rem;
-  margin: 1rem 0;
+  /*IDがnewsの要素に対するスタイル設定*/
+  background-color: #f0f0f0; /*背景色を薄いグレーに設定*/
+  padding: 0.5rem; /*要素の内側の余白を0.5レムに設定*/
+  margin: 1rem 0; /*上下に1レム、左右に0の余白を設定*/
 }
 
 #news_title {
-  display: flex;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem;
+  /*IDがnews_titleの要素に対するスタイル設定*/
+  display: flex; /*フレックスボックスを使用*/
+  color: white; /*テキストの色を白に設定*/
+  background-color: var(
+    --bg-color
+  ); /*背景色をカスタムプロパティ(--bg-color)の値に設定*/
+  padding: 0.5rem; /*要素の内側の余白を0.5レムに設定*/
 }
 
 :is(#news_title, #news_num) img {
-  height: 1.5rem;
-  margin-right: 0.5rem;
+  /*#news_title要素または#news_num要素内のimg要素に対するスタイル設定*/
+  height: 1.5rem; /*画像の高さを1.5レムに設定*/
+  margin-right: 0.5rem; /*画像の右側に0.5レムの余白を設定*/
 }
 
 #news_num {
-  display: flex;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  color: blue;
+  /*IDがnews_numの要素に対するスタイル設定*/
+  display: flex; /*フレックスボックスを使用*/
+  margin-top: 0.5rem; /*上側に0.5レムの余白を設定*/
+  margin-left: 0.5rem; /*左側に0.5レムの余白を設定*/
+  color: blue; /*テキストの色を青に設定*/
 }
 
 #link {
-  display: flex;
-  gap: 1.5rem;
+  /*IDがlinkの要素に対するスタイル設定*/
+  display: flex; /*フレックスボックスを使用*/
+  gap: 1.5rem; /*フレックスアイテム間の間隔を1.5レムに設定*/
 }
 
 #link div {
-  width: fit-content;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem 2rem;
-  margin-left: 0.5rem;
+  /*IDがlink内のdiv要素に対するスタイル設定*/
+  width: fit-content; /*要素の幅を内容に合わせて調整*/
+  color: white; /*テキストの色を白に設定*/
+  background-color: var(
+    --bg-color
+  ); /*背景色をカスタムプロパティ(--bg-color)の値に設定*/
+  padding: 0.5rem 2rem; /*上下に0.5レム、左右に2レムの余白を設定*/
+  margin-left: 0.5rem; /*左側に0.5レムの余白を設定*/
 }
 
 #link div a {
-  color: white;
-  text-decoration: none;
-  display: block;
+  /*IDがlink内のdiv要素内のa要素に対するスタイル設定*/
+  color: white; /*テキストの色を白に設定*/
+  text-decoration: none; /*テキストの下線を削除*/
+  display: block; /*要素をブロックレベル要素として表示*/
 }
 
 header p:last-child {
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
+  /*header要素内の最後のp要素に対するスタイル設定*/
+  margin-left: 0.5rem; /*左側に0.5レムの余白を設定*/
+  padding-left: 0.5rem; /*左側の余白を0.5レムに設定*/
 }
 
 main#top {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.75rem;
-  gap: 1rem 0.4rem;
-  color: #44077d;
-  margin-bottom: 2rem;
-  margin-left: 0.5rem;
+  /*IDがtopのmain要素に対するスタイル設定*/
+  display: flex; /*フレックスボックスを使用*/
+  flex-wrap: wrap; /*フレックスアイテムが折り返されるように設定*/
+  font-size: 0.75rem; /*テキストのフォントサイズを0.75レムに設定*/
+  gap: 1rem 0.4rem; /*フレックスアイテム間の縦方向の間隔を1レム、横方向の間隔を0.4レムに設定*/
+  color: #44077d; /*テキストの色を紫色に設定*/
+  margin-bottom: 2rem; /*下側に2レムの余白を設定*/
+  margin-left: 0.5rem; /*左側に0.5レムの余白を設定*/
 }
 
 :is(#upper_menu, main#top) a {
-  color: #44077d;
-  text-decoration: none;
-  display: block;
+  /*#upper_menu要素またはmain#top要素内のa要素に対するスタイル設定*/
+  color: #44077d; /*テキストの色を紫色に設定*/
+  text-decoration: none; /*テキストの下線を削除*/
+  display: block; /*要素をブロックレベル要素として表示*/
 }
 
 main#top div {
-  width: 5rem;
-  width: 27%;
-  text-align: center;
-  padding: 0.5rem;
+  /*main#top内のdiv要素に対するスタイル設定*/
+  width: 5rem; /*要素の幅を5レムに設定*/
+  width: 27%; /*要素の幅を親要素の幅の27%に設定　後に書かれたスタイルが優先される*/
+  text-align: center; /*テキストを中央揃え*/
+  padding: 0.5rem; /*上下左右に0.5レムの余白を設定*/
 }
 
 main#top div:nth-child(1) {
-  background-color: #f4bab8;
+  /*main#top内の1番目のdiv要素に対するスタイル設定*/
+  background-color: #f4bab8; /*背景色を薄いピンクに設定*/
 }
 
 main#top div:nth-child(2) {
-  background-color: #f9dcbc;
+  /*2番目*/
+  background-color: #f9dcbc; /*薄いオレンジ*/
 }
 
 main#top div:nth-child(3) {
-  font-size: 0.6rem;
-  background-color: #f3bada;
+  /*3番目*/
+  font-size: 0.6rem; /*テキストのフォントサイズを0.6レムに設定*/
+  background-color: #f3bada; /*薄いラベンダー*/
 }
 
 main#top div:nth-child(4) {
-  background-color: #b55c92;
+  /*4番目*/
+  background-color: #b55c92; /*ダークピンク*/
 }
 
 main#top div:nth-child(5) {
-  background-color: #bddafa;
+  /*5番目*/
+  background-color: #bddafa; /*薄いブルー*/
 }
 
 main#top div:nth-child(6) {
-  background-color: #c6fddd;
+  /*6番目*/
+  background-color: #c6fddd; /*薄いグリーン*/
 }
 
 main#top div:nth-child(7) {
-  background-color: #e1febe;
+  /*7番目*/
+  background-color: #e1febe; /*薄いイエロー*/
 }
 
 footer p {
-  font-weight: bold;
-  margin-bottom: 2rem;
+  /*footer内のp要素に対するスタイル設定*/
+  font-weight: bold; /*テキストの太字を指定*/
+  margin-bottom: 2rem; /*下側に2レムの余白を設定*/
 }
 
 #information {
-  border: solid 1px #feb64a;
-  border-radius: 0.5rem;
-  height: 5rem;
-  background-color: white;
+  /*IDがinformationの要素に対するスタイル設定*/
+  border: solid 1px #feb64a; /*1ピクセルの幅の実線で黄色の境界線を設定*/
+  border-radius: 0.5rem; /*境界線の角を0.5レムの丸みにする*/
+  height: 5rem; /*要素の高さを5レムに設定*/
+  background-color: white; /*背景色を白に設定*/
 }
