@@ -1,63 +1,100 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- 文書タイプと言語 -->
     <meta charset="UTF-8" />
+    <!-- 文字エンコーディング -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ビューポート設定 -->
     <title>MUSESトップ</title>
+    <!-- タイトル -->
     <link href="index.css" rel="stylesheet" />
+    <!-- スタイルシートのリンク -->
   </head>
   <body>
     <header>
+      <!-- ヘッダー部分 -->
       <figure id="logo">
+        <!-- ロゴの画像 -->
         <img src="img/logo.png" />
       </figure>
-      <div id="user_name"><img src="img/user_icon.png" /><span></span> さん</div>
+      <div id="user_name">
+        <img src="img/user_icon.png" /><span></span> さん
+      </div>
+      <!-- ユーザー名表示 -->
       <div id="upper_menu">
+        <!-- 上部メニュー -->
         <div>
           <img src="img/pc_site.png" /><br />
+          <!-- PC版アイコン -->
           PC版
         </div>
         <div>
           <img src="img/timeout.png" /><br />
+          <!-- 残り時間アイコン -->
           残り<br />約40分
         </div>
         <div>
           <a href="login.html">
+            <!-- ログアウトリンク -->
             <img src="img/logout.png" /><br />
             ログアウト
           </a>
         </div>
       </div>
       <div id="news">
+        <!-- 新着情報 -->
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
-        <div id="news_num"><img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span>件 あります！</div>
+        <!-- 新着情報タイトル -->
+        <div id="news_num">
+          <img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span
+          >件 あります！
+          <!-- 未読掲示数 -->
+        </div>
       </div>
       <div id="link">
+        <!-- リンク -->
         <div>HOME &gt;</div>
+        <!-- HOMEリンク -->
       </div>
       <p>登録されていません</p>
+      <!-- 登録されていない場合の表示 -->
     </header>
 
     <main id="top">
+      <!-- メインコンテンツ -->
       <div>
+        <!-- info@MUSESへのリンク -->
         <a href="menu.html"><img src="img/info_muses.png" /><br />info@MUSES</a>
       </div>
       <div><img src="img/paper.png" /><br />履修</div>
+      <!-- 履修に関する情報 -->
       <div><img src="img/cancelling.png" /><br />休講・補講等情報参照</div>
+      <!-- 休講・補講等情報へのリンク -->
       <div><img src="img/paper.png" /><br />出欠</div>
+      <!-- 出欠に関する情報 -->
       <div><img src="img/survey.png" /><br />授業アンケート</div>
+      <!-- 授業アンケートへのリンク -->
       <div><img src="img/career.png" /><br />キャリア支援</div>
+      <!-- キャリア支援に関する情報 -->
       <div><img src="img/syllabus.png" /><br />シラバス</div>
+      <!-- シラバスへのリンク -->
     </main>
 
     <footer>
+      <!-- フッター -->
       <div id="link">
+        <!-- リンク -->
         <div>HOME &gt;</div>
+        <!-- HOMEリンク -->
       </div>
       <p>Information</p>
+      <!-- 情報 -->
       <div id="information"></div>
+      <!-- 情報コンテンツ -->
     </footer>
 
     <script src="index.js"></script>
+    <!-- JavaScriptファイル「index.js」を読み込み -->
   </body>
 </html>
