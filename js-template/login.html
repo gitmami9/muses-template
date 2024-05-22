@@ -9,18 +9,26 @@
     ユーザー名：<input /> <button>ログイン</button>
 
     <script>
-      document.addEventListener('DOMContentLoaded', async () => {
+      //スクリプトの実行をDOMContentLoadedイベント後に設定
+      document.addEventListener("DOMContentLLoaded", async () => {
+        //sessionStorageからusernameを削除
         delete sessionStorage.username;
-        document.querySelector('input').value = '武庫川　花子';
+        //入力フィールドのデフォルトの値を「武庫川　花子」に設定
+        document.querySelector("input").value = "武庫川　花子";
       });
 
-      document.querySelector('button').addEventListener('click', () => {
-        const username = document.querySelector('input').value;
+      //ログインボタンがクリックされたときに実行
+      document.querySelector("button").addEventListener("click", () => {
+        //入力フィールドの値を取得し、username変数に格納
+        const username = document.querySelector("input").value;
+        //ユーザー名が入力されていない場合、アラートを表示する
         if (!username) {
-          window.alert('ユーザー名を入力してください');
+          window.alert("ユーザー名を入力してください");
+          //sessionStorageにユーザー名を保存する
         } else {
           sessionStorage.username = username;
-          location.href = 'index.html';
+          //index.htmlにリダイレクト
+          location.href = "index.html";
         }
       });
     </script>
