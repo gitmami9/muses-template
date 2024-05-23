@@ -9,22 +9,28 @@
   </head>
   <body>
     <header>
+      <!--ヘッダー部分-->
       <figure id="logo">
+        <!-- ロゴの画像 -->
         <img src="img/logo.png" />
       </figure>
       <div id="user_name">
         <img src="img/user_icon.png" /><span></span> さん
       </div>
+      <!--ユーザー名表示-->
       <div id="upper_menu">
         <div>
+          <!-- PC版アイコン -->
           <img src="img/pc_site.png" /><br />
           PC版
         </div>
         <div>
+          <!-- 残り時間アイコン -->
           <img src="img/timeout.png" /><br />
           残り<br />約40分
         </div>
         <div>
+          <!-- ログアウトリンク -->
           <a href="login.html">
             <img src="img/logout.png" /><br />
             ログアウト
@@ -32,20 +38,26 @@
         </div>
       </div>
       <div id="news">
+        <!-- 新着情報 -->
         <div id="news_title"><img src="img/infoman.png" />新着情報</div>
+        <!-- 新着情報タイトル -->
         <div id="news_num">
           <img
             src="img/board.png"
           />未読掲示が&nbsp;<!--改行されない空白--><span class="unread"></span
           >件 あります！
+          <!-- 未読掲示数 -->
         </div>
       </div>
+      <!-- リンク -->
       <div id="link">
         <div>
+          <!-- HOMEリンク -->
           <a href="index.html">HOME &gt;<!-- ">" --></a>
         </div>
         <div>info@MUSES &gt;</div>
       </div>
+      <!-- 登録されていない場合の表示 -->
       <p>登録されていません</p>
     </header>
 
@@ -56,6 +68,7 @@
           ★★大学からの連絡・通知などはすべて口頭、文書及び本学所定の掲示板に掲示して行うものとします。★★
         </div>
         <div id="unread_num">
+          <!--未読件数を表示する-->
           <span class="exmark">!</span>：未読(<span class="unread"></span>件)
         </div>
         <div id="info_list">
@@ -63,7 +76,9 @@
         </div>
       </div>
       <div id="control">
+        <!--既読の掲示も表示される-->
         <div class="info_btn">既読も表示</div>
+        <!--情報検索-->
         <div class="info_btn">info@MUSES 情報検索</div>
       </div>
       <div id="info_footer"><img src="img/loupe.gif" /> info@MUSES参照</div>
@@ -71,12 +86,14 @@
 
     <footer>
       <div id="link">
+        <!--HOMEへのリンク-->
         <div><a href="index.html">HOME &gt;</a></div>
       </div>
       <p>Information</p>
       <div id="information"></div>
     </footer>
 
+    <!--JavaScriptファイル「menu.js」を読み込み-->
     <script src="menu.js"></script>
   </body>
 </html>
