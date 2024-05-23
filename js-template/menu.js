@@ -1,23 +1,25 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const username = sessionStorage.username; //HTMLドキュメントの読み込みが完了したときに実行　(sessionStorage:ブラウザーを終了すると消えてしまう一時的なストレージ)
+  //HTMLドキュメントの読み込みが完了したときに実行
+  const username = sessionStorage.username; //sessionStorage:ブラウザを終了すると消えてしまう一時的なストレージ
   if (!username) {
     //未定義のストレージデータの場合
-    window.alert("ログインしてください");
+    window.alert("ログインしてください"); // アラート表示
     location.href = "login.html"; //このURLに移動する
   }
-  document.querySelector("#user_name span").textContent = username;
-
+  document.querySelector("#user_name span").textContent = username; // ユーザ名を表示する要素を更新
+  // data.jsonをフェッチし、その内容をオブジェクトに変換
   const res = await fetch("data.json");
   const obj = await res.json();
   const data = obj.list;
-  console.log(data);
+  console.log(data); // デバッグ用にデータをコンソールに表示
 
+  //未読メッセージ数更新
   document
     .querySelectorAll("span.unread")
     .forEach((el) => (el.textContent = data.length));
-
+  // 取得したデータを基にメッセージを作成し、info_listに追加
   const info_list = document.querySelector("div#info_list");
 
   for (const item of data) {
