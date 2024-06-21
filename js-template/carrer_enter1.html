@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文書タイプと言語 -->
+    <meta charset="UTF-8" />
+    <!-- 文字エンコーディング -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ビューポート設定 -->
+    <title>MUSES キャリア支援 就活状況入力画面</title>
+    <!-- タイトル -->
+    <link href="index.css" rel="stylesheet" />
+    <!-- スタイルシートのリンク -->
+  </head>
+  <body>
+    <header>
+      <!-- ヘッダー部分 -->
+      <figure id="logo">
+        <!-- ロゴの画像 -->
+        <img src="img/logo.png" />
+      </figure>
+      <div id="user_name">
+        <img src="img/user_icon.png" /><span></span> さん
+      </div>
+      <!-- ユーザー名表示 -->
+      <div id="upper_menu">
+        <!-- 上部メニュー -->
+        <div>
+          <img src="img/pc_site.png" /><br />
+          <!-- PC版アイコン -->
+          PC版
+        </div>
+        <div>
+          <img src="img/timeout.png" /><br />
+          <!-- 残り時間アイコン -->
+          残り<br />約40分
+        </div>
+        <div>
+          <a href="login.html">
+            <!-- ログアウトリンク -->
+            <img src="img/logout.png" /><br />
+            ログアウト
+          </a>
+        </div>
+      </div>
+      <div id="link">
+        <div>
+          <!-- HOMEリンク -->
+          <a href="index.html">HOME &gt;<!-- ">" --></a>
+        </div>
+        <div>キャリア支援 &gt;</div>
+      </div>
+    </header>
+
+    <main id="enter">
+      <div id="enter_header"><img src="img/paper.png" /> 入力画面</div>
+      <div id="enter_link">
+        <div id="enter_belong">
+          <h1>所属</h1>
+          <select name="university">
+            <option value="" selected hidden>大学・短大</option>
+            <option value="uni">大学</option>
+            <option value="jun">短大</option>
+          </select>
+          <select name="grade">
+            <option value="" selected hidden>学年</option>
+            <option value="1">1年</option>
+            <option value="2">2年</option>
+            <option value="3">3年</option>
+            <option value="4">4年</option>
+          </select>
+          <select name="faculty">
+            <option value="" selected hidden>学部・学科</option>
+            <option value="life">生活環境学部・生活環境学科</option>
+            <option value="inf">生活環境学部・情報メディア学科</option>
+          </select>
+          </div>
+
+          <div id="enter_content">
+            <h1>内容</h1>
+            <select name="content">
+              <option value="" selected hidden>内容</option>
+              <option value="op">オープンカンパニー</option>
+              <option value="ca">キャリア支援</option>
+              <option value="ge">汎用的能力・専門活用型インターンシップ</option>
+              <option value="hi">高度専門型インターンシップ</option>
+              <option value="in">面接</option>
+              <option value="gd">グループディスカッション</option>
+            </select>
+            </div>
+
+            <div id="enter_industry">
+              <h1>業種・職種</h1>
+              <input type="text" name="enterprise" placeholder="企業名">
+              <select name="industry_type">
+                <option value="" selected hidden>業種</option>
+                <option value="in1">業種1</option>
+                <option value="in2">業種2</option>
+                <option value="in3">業種3</option>
+                <option value="in4">業種4</option>
+              </select>
+              <select name="occupation">
+                <option value="" selected hidden>職種</option>
+                <option value="oc1">職種1</option>
+                <option value="oc2">職種2</option>
+                <option value="oc3">職種3</option>
+                <option value="oc4">職種4</option>
+              </select>
+              </div>
+
+              <div id="enter_term">
+                <h1>期間</h1>
+                <input type="date" name="term_sta">
+                ～
+                <input type="date" name="term_end">
+                </div>
+
+                <button id="entry">登録</button>
+                <button id="back">戻る</button>
+        
+    </main>
+
+    <footer>
+      <!-- フッター -->
+      <div id="link">
+        <!-- リンク -->
+      </div>
+      <p>Information</p>
+      <!-- 情報 -->
+      <div id="information"></div>
+      <!-- 情報コンテンツ -->
+    </footer>
+  </body>
+</html>
