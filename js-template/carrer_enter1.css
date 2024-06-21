@@ -1,0 +1,28 @@
+h1 {
+  background-color: #d2fbaf; /*背景色を薄い黄緑に設定*/
+  margin-bottom: 0.2rem; /*下部に0.2remの余白を設定*/
+  padding: 0.2rem 1rem; /*内部の余白を0.2remに設定*/
+  font-size: 1.2rem; /*フォントサイズを1.2remに設定*/
+}
+
+#enter {
+}
+#enter_header {
+  padding: 0.5rem; /*内部の余白を0.5remに設定*/
+  color: white; /*文字色を白に設定*/
+  background-color: #5a9674; /*背景色を濃い緑に設定*/
+}
+#enter_link {
+}
+#enter_belong {
+}
+#enter_content {
+}
+#enter_industry {
+}
+#enter_term {
+}
+#entry {
+}
+#back {
+}
