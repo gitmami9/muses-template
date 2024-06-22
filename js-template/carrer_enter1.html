@@ -53,32 +53,32 @@
     </header>
 
     <main id="enter">
-      <div id="enter_header"><img src="img/paper.png" /> 入力画面</div>
+      <div id="enter_header"><img src="img/pencil.png" /> 入力画面</div>
       <div id="enter_link">
         <div id="enter_belong">
           <h1>所属</h1>
-          <select name="university">
-            <option value="" selected hidden>大学・短大</option>
+          <select name="university" onchange="changeColor(this)">
+            <option value="" selected hidden >大学・短大</option>
             <option value="uni">大学</option>
             <option value="jun">短大</option>
-          </select>
-          <select name="grade">
+          </select> <br> 
+          <select name="grade" onchange="changeColor(this)">
             <option value="" selected hidden>学年</option>
             <option value="1">1年</option>
             <option value="2">2年</option>
             <option value="3">3年</option>
             <option value="4">4年</option>
-          </select>
-          <select name="faculty">
+          </select><br> 
+          <select name="faculty" onchange="changeColor(this)">
             <option value="" selected hidden>学部・学科</option>
             <option value="life">生活環境学部・生活環境学科</option>
             <option value="inf">生活環境学部・情報メディア学科</option>
-          </select>
+          </select><br> 
           </div>
 
           <div id="enter_content">
             <h1>内容</h1>
-            <select name="content">
+            <select name="content" onchange="changeColor(this)">
               <option value="" selected hidden>内容</option>
               <option value="op">オープンカンパニー</option>
               <option value="ca">キャリア支援</option>
@@ -86,26 +86,26 @@
               <option value="hi">高度専門型インターンシップ</option>
               <option value="in">面接</option>
               <option value="gd">グループディスカッション</option>
-            </select>
+            </select><br> 
             </div>
 
             <div id="enter_industry">
               <h1>業種・職種</h1>
-              <input type="text" name="enterprise" placeholder="企業名">
-              <select name="industry_type">
+              <input type="text" name="enterprise" placeholder="企業名"><br> 
+              <select name="industry_type" onchange="changeColor(this)">
                 <option value="" selected hidden>業種</option>
                 <option value="in1">業種1</option>
                 <option value="in2">業種2</option>
                 <option value="in3">業種3</option>
                 <option value="in4">業種4</option>
-              </select>
-              <select name="occupation">
+              </select><br> 
+              <select name="occupation" onchange="changeColor(this)">
                 <option value="" selected hidden>職種</option>
                 <option value="oc1">職種1</option>
                 <option value="oc2">職種2</option>
                 <option value="oc3">職種3</option>
                 <option value="oc4">職種4</option>
-              </select>
+              </select><br> 
               </div>
 
               <div id="enter_term">
@@ -113,13 +113,13 @@
                 <input type="date" name="term_sta">
                 ～
                 <input type="date" name="term_end">
-                </div>
-
-                <button id="entry">登録</button>
-                <button id="back">戻る</button>
-        
+                </div>   
     </main>
-
+    <div id="bt">
+    <button id="entry">登録</button>
+    <button id="back">戻る</button>
+  </div>
+    
     <footer>
       <!-- フッター -->
       <div id="link">
@@ -130,5 +130,7 @@
       <div id="information"></div>
       <!-- 情報コンテンツ -->
     </footer>
+    <!--JavaScriptファイル「carrer_enter1.js」を読み込み-->
+    <script src="carrer_enter1.js"></script>
   </body>
 </html>
