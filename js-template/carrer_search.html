@@ -6,9 +6,10 @@
     <!-- 文字エンコーディング -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ビューポート設定 -->
-    <title>MUSESトップ</title>
+    <title>MUSES キャリア支援 就活状況参照_検索画面</title>
     <!-- タイトル -->
     <link href="index.css" rel="stylesheet" />
+    <link href="carrer_enter1&search.css" rel="stylesheet" />
     <!-- スタイルシートのリンク -->
   </head>
   <body>
@@ -42,35 +43,93 @@
           </a>
         </div>
       </div>
-      <div id="news">
-        <!-- 新着情報 -->
-        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
-        <!-- 新着情報タイトル -->
-        <div id="news_num">
-          <img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span
-          >件 あります！
-          <!-- 未読掲示数 -->
-        </div>
-      </div>
       <div id="link">
-        <!-- リンク -->
-        <div>HOME &gt;</div>
-        <!-- HOMEリンク -->
+        <div>
+          <!-- HOMEリンク -->
+          <a href="index.html">HOME &gt;<!-- ">" --></a>
+        </div>
+        <div>キャリア支援 &gt;</div>
       </div>
-      <p>登録されていません</p>
-      <!-- 登録されていない場合の表示 -->
     </header>
+
+    <main id="enter">
+      <div id="enter_header"><img src="img/loupe.gif" /> 検索画面</div>
+      <div id="enter_link">
+        <div id="enter_belong">
+          <h1>所属</h1>
+          <select name="university" onchange="changeColor(this)">
+            <option value="" selected hidden >大学・短大</option>
+            <option value="uni">大学</option>
+            <option value="jun">短大</option>
+          </select> <br> 
+          <select name="grade" onchange="changeColor(this)">
+            <option value="" selected hidden>学年</option>
+            <option value="1">1年</option>
+            <option value="2">2年</option>
+            <option value="3">3年</option>
+            <option value="4">4年</option>
+          </select><br> 
+          <select name="faculty" onchange="changeColor(this)">
+            <option value="" selected hidden>学部・学科</option>
+            <option value="life">生活環境学部・生活環境学科</option>
+            <option value="inf">生活環境学部・情報メディア学科</option>
+          </select><br> 
+          </div>
+
+          <div id="enter_content">
+            <h1>内容</h1>
+            <select name="content" onchange="changeColor(this)">
+              <option value="" selected hidden>内容</option>
+              <option value="op">オープンカンパニー</option>
+              <option value="ca">キャリア支援</option>
+              <option value="ge">汎用的能力・専門活用型インターンシップ</option>
+              <option value="hi">高度専門型インターンシップ</option>
+              <option value="in">面接</option>
+              <option value="gd">グループディスカッション</option>
+            </select><br> 
+            </div>
+
+            <div id="enter_industry">
+              <h1>業種・職種</h1>
+              <select name="industry_type" onchange="changeColor(this)">
+                <option value="" selected hidden>業種</option>
+                <option value="in1">業種1</option>
+                <option value="in2">業種2</option>
+                <option value="in3">業種3</option>
+                <option value="in4">業種4</option>
+              </select><br> 
+              <select name="occupation" onchange="changeColor(this)">
+                <option value="" selected hidden>職種</option>
+                <option value="oc1">職種1</option>
+                <option value="oc2">職種2</option>
+                <option value="oc3">職種3</option>
+                <option value="oc4">職種4</option>
+              </select><br> 
+              </div>
+
+              <div id="enter_term">
+                <h1>期間</h1>
+                <input type="date" name="term_sta">
+                ～
+                <input type="date" name="term_end">
+                </div>   
+    </main>
+    <div id="bt">
+    <button id="entry">検索</button>
+    <button id="back">戻る</button>
+  </div>
+    
     <footer>
       <!-- フッター -->
       <div id="link">
         <!-- リンク -->
-        <div>HOME &gt;</div>
-        <!-- HOMEリンク -->
       </div>
       <p>Information</p>
       <!-- 情報 -->
       <div id="information"></div>
       <!-- 情報コンテンツ -->
     </footer>
+    <!--JavaScriptファイル「carrer_enter1.js」を読み込み-->
+    <script src="carrer_search.js"></script>
   </body>
 </html>
