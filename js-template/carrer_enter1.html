@@ -6,7 +6,7 @@
     <!-- 文字エンコーディング -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ビューポート設定 -->
-    <title>MUSES キャリア支援 就活状況参照_検索画面</title>
+    <title>MUSES キャリア支援 就活状況入力画面</title>
     <!-- タイトル -->
     <link href="index.css" rel="stylesheet" />
     <link href="carrer_enter1&search.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     </header>
 
     <main id="enter">
-      <div id="enter_header"><img src="img/loupe.gif" /> 検索画面</div>
+      <div id="enter_header"><img src="img/pencil.png" /> 入力画面</div>
       <div id="enter_link">
         <div id="enter_belong">
           <h1>所属</h1>
@@ -91,6 +91,7 @@
 
             <div id="enter_industry">
               <h1>業種・職種</h1>
+              <input type="text" name="enterprise" placeholder="企業名"><br> 
               <select name="industry_type" onchange="changeColor(this)">
                 <option value="" selected hidden>業種</option>
                 <option value="in1">業種1</option>
@@ -115,7 +116,7 @@
                 </div>   
     </main>
     <div id="bt">
-    <button id="entry">検索</button>
+    <button id="entry">登録</button>
     <button id="back">戻る</button>
   </div>
     
@@ -130,6 +131,6 @@
       <!-- 情報コンテンツ -->
     </footer>
     <!--JavaScriptファイル「carrer_enter1.js」を読み込み-->
-    <script src="carrer_search.js"></script>
+    <script src="carrer_enter1.js"></script>
   </body>
 </html>
