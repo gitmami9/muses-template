@@ -119,11 +119,23 @@ figure#logo {
   display: block;
 }
 #select {
-  display: block;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 #select div {
+  display: flex;
+  justify-content: center;
   background-color: greenyellow;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 20rem;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 4rem;
 }
+
 header p:last-child {
   margin-left: 0.5rem;
   padding-left: 0.5rem;
