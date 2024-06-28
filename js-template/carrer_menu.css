@@ -1,210 +1,32 @@
-:root {
-  font-size: 16px;
-  --bg-color: #555555;
-}
-
-body {
-  box-sizing: border-box;
-  background-color: #fefff2;
-  width: 430px;
-  border: solid lightgray 1px;
-  margin: 0;
-  padding: 0.5rem;
-}
-
-header {
-  margin-bottom: 2rem;
-}
-figure#logo {
-  margin: 1rem 0;
-}
-
-#logo img {
-  width: 16rem;
-  height: 3rem;
-}
-
-#user_name {
-  display: flex;
+button {
+  width: 100%;
+  height: 70px;
+  background-color: #a4e792;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  margin: 2rem auto;
   align-items: center;
-  background-color: #cccccc;
-  margin: 1rem 5px;
-  gap: 0.5rem;
-  width: fit-content;
-  padding-right: 1rem;
-  height: 1.7rem;
 }
 
-#user_name img {
-  height: 1.5rem;
-  margin: 0.1rem;
-  background-color: var(--bg-color);
-}
-
-#upper_menu {
-  display: flex;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  color: #330066;
-  margin: 1rem 0;
-}
-
-#upper_menu div {
-  padding: 0.5rem;
-  width: 4.5rem;
-  text-align: center;
-}
-
-#upper_menu img {
-  width: 2rem;
-}
-
-#upper_menu p {
-  margin: 0;
-}
-
-#upper_menu div:nth-child(1) {
-  background-color: #ef8683;
-}
-
-#upper_menu div:nth-child(2) {
-  background-color: #ffff91;
-}
-
-#upper_menu div:nth-child(3) {
-  background-color: #ef86bd;
-}
-
-#news {
-  background-color: #f0f0f0;
-  padding: 0.5rem;
-  margin: 1rem 0;
-}
-
-#news_title {
-  display: flex;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem;
-}
-
-:is(#news_title, #news_num) img {
-  height: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-#news_num {
-  display: flex;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  color: blue;
-}
-
-#link {
-  display: flex;
-  gap: 1.5rem;
-}
-
-#link div {
-  width: fit-content;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem 2rem;
-  margin-left: 0.5rem;
-}
-
-#link div a {
-  color: white;
+button a {
   text-decoration: none;
+  color: inherit;
   display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px; /* テキストを垂直方向に中央寄せ */
 }
-#select {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  text-align: center;
+
+button:hover {
+  background-color: #92d17c;
 }
-#select div {
-  display: flex;
-  justify-content: center;
-  background-color: #4caf50;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  width: 20rem;
-  height: 4rem;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 4rem;
-}
+
+/* アイコン画像のスタイル設定 */
 .icon {
   width: 30px;
   height: 30px;
-  margin-top: 1rem;
-}
-header p:last-child {
-  margin-left: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-main#top {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 0.75rem;
-  gap: 1rem 0.4rem;
-  color: #44077d;
-  margin-bottom: 2rem;
-  margin-left: 0.5rem;
-}
-
-:is(#upper_menu, main#top) a {
-  color: #44077d;
-  text-decoration: none;
-  display: block;
-}
-
-main#top div {
-  width: 5rem;
-  width: 27%;
-  text-align: center;
-  padding: 0.5rem;
-}
-
-main#top div:nth-child(1) {
-  background-color: #f4bab8;
-}
-
-main#top div:nth-child(2) {
-  background-color: #f9dcbc;
-}
-
-main#top div:nth-child(3) {
-  font-size: 0.6rem;
-  background-color: #f3bada;
-}
-
-main#top div:nth-child(4) {
-  background-color: #b55c92;
-}
-
-main#top div:nth-child(5) {
-  background-color: #bddafa;
-}
-
-main#top div:nth-child(6) {
-  background-color: #c6fddd;
-}
-
-main#top div:nth-child(7) {
-  background-color: #e1febe;
-}
-
-footer p {
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-#information {
-  border: solid 1px #feb64a;
-  border-radius: 0.5rem;
-  height: 5rem;
-  background-color: white;
 }
