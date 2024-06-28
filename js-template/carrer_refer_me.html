@@ -6,9 +6,10 @@
     <!-- 文字エンコーディング -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ビューポート設定 -->
-    <title>MUSESトップ</title>
+    <title>自分の就活状況参照画面</title>
     <!-- タイトル -->
     <link href="index.css" rel="stylesheet" />
+    <link href="carrer_refer_me.css" rel="stylesheet" />
     <!-- スタイルシートのリンク -->
   </head>
   <body>
@@ -16,61 +17,95 @@
       <!-- ヘッダー部分 -->
       <figure id="logo">
         <!-- ロゴの画像 -->
-        <img src="img/logo.png" />
+        <img src="img/logo.png" alt="Logo" />
       </figure>
       <div id="user_name">
-        <img src="img/user_icon.png" /><span></span> さん
+        <img src="img/user_icon.png" alt="User Icon" /><span></span> さん
       </div>
       <!-- ユーザー名表示 -->
       <div id="upper_menu">
         <!-- 上部メニュー -->
         <div>
-          <img src="img/pc_site.png" /><br />
+          <img src="img/pc_site.png" alt="PC Site" /><br />
           <!-- PC版アイコン -->
           PC版
         </div>
         <div>
-          <img src="img/timeout.png" /><br />
+          <img src="img/timeout.png" alt="Timeout" /><br />
           <!-- 残り時間アイコン -->
           残り<br />約40分
         </div>
         <div>
           <a href="login.html">
             <!-- ログアウトリンク -->
-            <img src="img/logout.png" /><br />
+            <img src="img/logout.png" alt="Logout" /><br />
             ログアウト
           </a>
         </div>
       </div>
-      <div id="news">
-        <!-- 新着情報 -->
-        <div id="news_title"><img src="img/infoman.png" />新着情報</div>
-        <!-- 新着情報タイトル -->
-        <div id="news_num">
-          <img src="img/board.png" />未読掲示が&nbsp;<span class="unread"></span
-          >件 あります！
-          <!-- 未読掲示数 -->
+      <div id="link">
+        <div>
+          <!-- HOMEリンク -->
+          <a href="index.html">HOME &gt;</a>
+        </div>
+        <div>
+          <!--キャリア支援リンク-->
+          <a href="carrer_enter.html"> キャリア支援 &gt;</a>
         </div>
       </div>
-      <div id="link">
-        <!-- リンク -->
-        <div>HOME &gt;</div>
-        <!-- HOMEリンク -->
-      </div>
-      <p>登録されていません</p>
-      <!-- 登録されていない場合の表示 -->
     </header>
+
+    <main id="enter">
+      <div id="enter_header">
+        <img src="img/pencil.png" alt="Pencil" /> 入力情報一覧
+      </div>
+      <div id="enter_link">
+        <div id="enter_belong">
+          <h1>企業名</h1>
+          <select id="company" onchange="changeColor(this)">
+            <option value="" selected hidden>企業</option>
+            <option value="co1">企業名１</option>
+            <option value="co2">企業名２</option></select
+          ><br />
+        </div>
+
+        <div id="job_info">
+          <div>
+            <label>業種：</label>
+            <label id="industry_type"></label><br />
+          </div>
+          <div>
+            <label>活動記録：</label>
+            <label id="record"></label><br />
+          </div>
+          <div>
+            <label>期間：</label>
+            <label id="term"></label><br />
+          </div>
+          <div>
+            <label>職種：</label>
+            <label id="occupation"></label><br />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="bt">
+      <!--キャリア支援リンク-->
+      <button id="back"><a href="carrer_enter.html">戻る</a></button>
+    </div>
+
     <footer>
       <!-- フッター -->
       <div id="link">
         <!-- リンク -->
-        <div>HOME &gt;</div>
-        <!-- HOMEリンク -->
       </div>
       <p>Information</p>
       <!-- 情報 -->
       <div id="information"></div>
       <!-- 情報コンテンツ -->
     </footer>
+    <!--JavaScriptファイル「carrer_refer_me.js」を読み込み-->
+    <script src="carrer_refer_me.js"></script>
   </body>
 </html>
