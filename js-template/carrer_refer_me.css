@@ -1,0 +1,79 @@
+#enter {
+  background-color: white;
+}
+
+#enter_header {
+  font-size: 1.5rem; /*フォントサイズを1.5remに設定*/
+  font-weight: bold;
+  color: white; /*文字色を白に設定*/
+  background-color: #5a9674; /*背景色を濃い緑に設定*/
+  padding: 0.6rem 0.5rem; /* 上下 左右 */
+}
+
+#enter_header img {
+  width: 20px;
+  padding-left: 0.5rem;
+}
+
+h1 {
+  padding: 0.2rem 1rem; /*内部の余白を0.2remに設定*/
+  font-size: 1.2rem; /*フォントサイズを1.2remに設定*/
+  color: white; /*文字色を白に設定*/
+  background-color: #d2fbaf; /*背景色を薄い黄緑に設定*/
+}
+
+select,
+input {
+  color: grey;
+  border: 1px solid;
+  border-color: gainsboro;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  width: 100%;
+}
+
+#enter_link {
+}
+#enter_belong {
+}
+#enter_content {
+}
+#enter_industry input {
+  color: black;
+}
+#enter_term input {
+  color: black;
+  width: 46%;
+}
+
+#bt {
+}
+
+button {
+  display: inline-block;
+  margin: 1.5rem 3em 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#entry {
+  border-color: #5a9674;
+  background-color: #d2fbaf;
+}
+
+#back {
+  border-color: gray;
+}
+
+label {
+  font-size: 1.2rem;
+}
