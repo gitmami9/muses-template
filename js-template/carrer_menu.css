@@ -135,7 +135,11 @@ figure#logo {
   margin-right: auto;
   line-height: 4rem;
 }
-
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+}
 header p:last-child {
   margin-left: 0.5rem;
   padding-left: 0.5rem;
