@@ -48,7 +48,8 @@
           <!-- HOMEリンク -->
           <a href="index.html">HOME &gt;<!-- ">" --></a>
         </div>
-        <div>キャリア支援 &gt;</div>
+        <div>
+        <a href="carrer_top.html">キャリア支援 &gt;<!-- ">" --></a></div>
       </div>
     </header>
 
@@ -58,21 +59,21 @@
         <div id="enter_belong">
           <h1>所属</h1>
           <select name="university" onchange="changeColor(this)">
-            <option value="" selected hidden >大学・短大</option>
+            <option value="" selected hidden>大学・短大</option>
             <option value="uni">大学</option>
             <option value="jun">短大</option>
           </select> <br> 
+          <select name="faculty" onchange="changeColor(this)">
+            <option value="" selected hidden>学部・学科</option>
+            <option value="life">生活環境学部・生活環境学科</option>
+            <option value="inf">生活環境学部・情報メディア学科</option>
+          </select><br> 
           <select name="grade" onchange="changeColor(this)">
             <option value="" selected hidden>学年</option>
             <option value="1">1年</option>
             <option value="2">2年</option>
             <option value="3">3年</option>
             <option value="4">4年</option>
-          </select><br> 
-          <select name="faculty" onchange="changeColor(this)">
-            <option value="" selected hidden>学部・学科</option>
-            <option value="life">生活環境学部・生活環境学科</option>
-            <option value="inf">生活環境学部・情報メディア学科</option>
           </select><br> 
           </div>
 
@@ -91,7 +92,7 @@
 
             <div id="enter_industry">
               <h1>業種・職種</h1>
-              <input type="text" name="enterprise" placeholder="企業名"><br> 
+              <input type="text" name="enterprise" placeholder="企業名" ><br> 
               <select name="industry_type" onchange="changeColor(this)">
                 <option value="" selected hidden>業種</option>
                 <option value="in1">業種1</option>
@@ -116,8 +117,8 @@
                 </div>   
     </main>
     <div id="bt">
-    <button id="entry">登録</button>
-    <button id="back">戻る</button>
+    <button id="entry" onclick="location.href='carrer_menu.html'">登録</button>
+    <button id="back" onclick="location.href='carrer_menu.html'">戻る</button>
   </div>
     
     <footer>
@@ -131,6 +132,6 @@
       <!-- 情報コンテンツ -->
     </footer>
     <!--JavaScriptファイル「carrer_enter1.js」を読み込み-->
-    <script src="carrer_enter1.js"></script>
+    <script src="carrer_enter.js"></script>
   </body>
 </html>

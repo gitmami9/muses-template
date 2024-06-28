@@ -22,6 +22,22 @@ button a {
 
 button:hover {
   background-color: #92d17c;
+#select {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+#select div {
+  display: flex;
+  justify-content: center;
+  background-color: #a4e792;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 20rem;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 4rem;
 }
 
 /* アイコン画像のスタイル設定 */
