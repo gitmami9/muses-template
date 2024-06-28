@@ -32,21 +32,12 @@ input {
   width: 100%;
 }
 
-#enter_link {
-}
-#enter_belong {
-}
-#enter_content {
-}
 #enter_industry input {
   color: black;
 }
 #enter_term input {
   color: black;
   width: 46%;
-}
-
-#bt {
 }
 
 button {
