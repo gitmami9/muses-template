@@ -126,7 +126,7 @@ figure#logo {
 #select div {
   display: flex;
   justify-content: center;
-  background-color: greenyellow;
+  background-color: #4caf50;
   margin-bottom: 1rem;
   padding: 0.5rem;
   width: 20rem;
