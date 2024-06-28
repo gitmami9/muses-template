@@ -18,7 +18,6 @@ document.getElementById("entry").addEventListener("click", function () {
   const industryType = document.querySelector(
     'select[name="industry_type"]'
   ).value;
-  const occupation = document.querySelector('select[name="occupation"]').value;
   const termSta = document.querySelector('input[name="term_sta"]').value;
   const termEnd = document.querySelector('input[name="term_end"]').value;
 

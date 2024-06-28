@@ -6,7 +6,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const faculty = urlParams.get("faculty") || "学部・学科";
   const content = urlParams.get("content") || "内容";
   const industryType = urlParams.get("industryType") || "業種";
-  const occupation = urlParams.get("occupation") || "職種";
   const termSta = urlParams.get("termSta") || "開始日";
   const termEnd = urlParams.get("termEnd") || "終了日";
 
@@ -14,6 +13,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     "aff"
   ).innerText = `${university} ${grade} ${faculty}`;
   document.getElementById("con").innerText = content;
-  document.getElementById("ind").innerText = `${industryType} ${occupation}`;
+  document.getElementById("ind").innerText = `${industryType}`;
   document.getElementById("date").innerText = `${termSta} ~ ${termEnd}`;
 });
