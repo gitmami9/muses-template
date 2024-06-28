@@ -148,7 +148,9 @@ figure#logo {
   text-decoration: none; /*テキストの下線を削除*/
   display: block; /*要素をブロックレベル要素として表示*/
 }
-
+#link a {
+  text-decoration: none;
+}
 header p:last-child {
   /*header要素内の最後のp要素に対するスタイル設定*/
   margin-left: 0.5rem; /*左側に0.5レムの余白を設定*/
