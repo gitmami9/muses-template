@@ -1,28 +1,4 @@
-document.getElementById("company").addEventListener("change", function () {
-  var selectedOption = this.value;
-  var industryType = document.getElementById("industry_type");
-  var record = document.getElementById("record");
-  var term = document.getElementById("term");
-  var occupation = document.getElementById("occupation");
-
-  if (selectedOption === "co1") {
-    industryType.textContent = "IT";
-    record.textContent = "プロジェクトA";
-    term.textContent = "4月16日～7月30日";
-    occupation.textContent = "エンジニア";
-  } else if (selectedOption === "co2") {
-    industryType.textContent = "製造";
-    record.textContent = "プロジェクトB";
-    term.textContent = "10月12日～12月23日";
-    occupation.textContent = "マネージャー";
-  } else {
-    industryType.textContent = "業種";
-    record.textContent = "活動記録１";
-    term.textContent = "期間";
-    occupation.textContent = "職種";
-  }
-});
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   // セッションストレージからユーザー名を取得
   const username = sessionStorage.username;
   // ユーザー名が存在しない場合はログインページにリダイレクト
@@ -32,4 +8,25 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   // ユーザー名を表示する要素にユーザー名をセット
   document.querySelector("#user_name span").textContent = username;
+
+  // ユーザー名をキーにしてローカルストレージからデータを取得
+  const userData = localStorage.getItem(username);
+  if (userData) {
+    const parsedData = JSON.parse(userData);
+    // 必要な情報を表示する部分にデータをセット
+    if (parsedData.length > 0) {
+      const latestData = parsedData[parsedData.length - 1];
+      document.getElementById("company").value = latestData.enterprise;
+      document.getElementById("industry_type").textContent =
+        latestData.industry_type;
+      document.getElementById("record").textContent = latestData.content;
+      document.getElementById(
+        "term"
+      ).textContent = `${latestData.term_sta} 〜 ${latestData.term_end}`;
+      document.getElementById("occupation").textContent = latestData.occupation;
+    }
+  } else {
+    // データが存在しない場合の処理
+    console.log("保存されたデータがありません");
+  }
 });
