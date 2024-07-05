@@ -8,7 +8,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   // ユーザー名を表示する要素にユーザー名をセット
   document.querySelector("#user_name span").textContent = username;
+
+  // data.jsonからデータを取得してドロップダウンリストを更新
+  try {
+    const response = await fetch("data.json");
+    const data = await response.json();
+
+    populateDropdown("faculty", data.faculty);
+    populateDropdown("content", data.content);
+    populateDropdown("industry_type", data.job);
+  } catch (error) {
+    console.error("Error loading data:", error);
+  }
 });
+
 /* ドロップダウンリストを選択すると、カラーを黒くする */
 function changeColor(hoge) {
   if (hoge.value == 0) {
@@ -17,6 +30,17 @@ function changeColor(hoge) {
     hoge.style.color = "black";
   }
 }
+
+function populateDropdown(id, options) {
+  const select = document.getElementById(id);
+  options.forEach((option) => {
+    const opt = document.createElement("option");
+    opt.value = option;
+    opt.textContent = option;
+    select.appendChild(opt);
+  });
+}
+
 function saveToLocalStorage() {
   const university = document.getElementById("university").value;
   const faculty = document.getElementById("faculty").value;
