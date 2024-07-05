@@ -8,22 +8,42 @@
     <link href="carrer_enter&search.css" rel="stylesheet" />
   </head>
   <body>
+    <header>
+      <!-- ヘッダー部分 -->
+      <figure id="logo">
+        <!-- ロゴの画像 -->
+        <img src="img/logo.png" />
+      </figure>
+      <div id="user_name">
+        <img src="img/user_icon.png" /><span></span> さん
+      </div>
+      <!-- ユーザー名表示 -->
+      <div id="upper_menu">
+        <!-- 上部メニュー -->
+        <div>
+          <img src="img/pc_site.png" /><br />
+          <!-- PC版アイコン -->
+          PC版
+        </div>
+        <div>
+          <img src="img/timeout.png" /><br />
+          <!-- 残り時間アイコン -->
+          残り<br />約40分
+        </div>
+        <div>
+          <a href="login.html">
+            <!-- ログアウトリンク -->
+            <img src="img/logout.png" /><br />
+            ログアウト
+          </a>
+        </div>
+      </div>
     <!-- 省略された部分 -->
     <main id="enter">
       <div id="enter_header"><img src="img/pencil.png" /> 入力画面</div>
       <div id="enter_link">
         <div id="enter_belong">
           <h1>所属</h1>
-          <select
-            name="university"
-            id="university"
-            onchange="changeColor(this)"
-          >
-            <option value="" selected hidden>大学・短大</option>
-            <option>大学</option>
-            <option>短大</option>
-          </select>
-          <br />
           <select name="faculty" id="faculty" onchange="changeColor(this)">
             <option value="" selected hidden>学部・学科</option></select
           ><br />

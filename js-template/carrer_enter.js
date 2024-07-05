@@ -1,3 +1,10 @@
+function changeColor(select) {
+  if (select.value) {
+    select.style.color = "black";
+  } else {
+    select.style.color = "gray";
+  }
+}
 document.addEventListener("DOMContentLoaded", async () => {
   // セッションストレージからユーザー名を取得
   const username = sessionStorage.username;
@@ -5,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!username) {
     window.alert("ログインしてください");
     location.href = "login.html";
+    return; // リダイレクト後は処理を中断
   }
   // ユーザー名を表示する要素にユーザー名をセット
   document.querySelector("#user_name span").textContent = username;
@@ -20,16 +28,26 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Error loading data:", error);
   }
-});
 
-/* ドロップダウンリストを選択すると、カラーを黒くする */
-function changeColor(hoge) {
-  if (hoge.value == 0) {
-    hoge.style.color = "";
-  } else {
-    hoge.style.color = "black";
-  }
-}
+  // 登録ボタンのクリックイベントリスナーを設定
+  const entryButton = document.getElementById("entry");
+  entryButton.addEventListener("click", async (event) => {
+    event.preventDefault(); // ボタンのデフォルトの動作（ページ遷移）を抑制
+
+    // ユーザー名が存在しない場合、エラーを出力して処理を中断する
+    if (!username) {
+      console.error("Username is not defined.");
+      return;
+    }
+
+    // username を引数として保存関数を呼び出す
+    await saveToLocalStorage(username); // データ保存を非同期で実行
+
+    // データ保存後の処理
+    alert("データが保存されました");
+    location.href = "carrer_menu.html";
+  });
+});
 
 function populateDropdown(id, options) {
   const select = document.getElementById(id);
@@ -41,8 +59,7 @@ function populateDropdown(id, options) {
   });
 }
 
-function saveToLocalStorage() {
-  const university = document.getElementById("university").value;
+async function saveToLocalStorage(username) {
   const faculty = document.getElementById("faculty").value;
   const grade = document.getElementById("grade").value;
   const content = document.getElementById("content").value;
@@ -53,7 +70,6 @@ function saveToLocalStorage() {
   const term_end = document.getElementById("term_end").value;
 
   const formData = {
-    university,
     faculty,
     grade,
     content,
@@ -64,43 +80,12 @@ function saveToLocalStorage() {
     term_end,
   };
 
-  let existingData = localStorage.getItem("careerFormData");
+  let existingData = localStorage.getItem(username); // ユーザー名をキーにしてローカルストレージから取得
   existingData = existingData ? JSON.parse(existingData) : [];
 
   // 新しいデータを既存データに追加
   existingData.push(formData);
 
-  // ローカルストレージに保存
-  localStorage.setItem("careerFormData", JSON.stringify(existingData));
-  alert("データが保存されました");
-  location.href = "carrer_menu.html";
-}
-
-/* 試験中 */
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      populateDropdown("faculty", data.faculty);
-      populateDropdown("content", data.content);
-      populateDropdown("industry_type", data.job);
-    })
-    .catch((error) => console.error("Error loading JSON:", error));
-});
-
-function populateDropdown(elementId, items) {
-  const dropdown = document.getElementById(elementId);
-  items.forEach((item) => {
-    const option = document.createElement("option");
-    option.textContent = item;
-    dropdown.appendChild(option);
-  });
-}
-
-function changeColor(select) {
-  if (select.value) {
-    select.style.color = "black";
-  } else {
-    select.style.color = "gray";
-  }
+  // ローカルストレージに保存（ユーザー名をキーとして）
+  localStorage.setItem(username, JSON.stringify(existingData));
 }
