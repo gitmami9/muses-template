@@ -75,3 +75,36 @@ function saveToLocalStorage() {
   alert("データが保存されました");
   location.href = "carrer_menu.html";
 }
+
+/* 試験中 */
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      populateDropdown("faculty", data.faculty);
+      populateDropdown("content", data.content);
+      populateDropdown("industry_type", data.job);
+    })
+    .catch((error) => console.error("Error loading JSON:", error));
+});
+
+function populateDropdown(elementId, items) {
+  const dropdown = document.getElementById(elementId);
+  items.forEach((item) => {
+    const option = document.createElement("option");
+    option.textContent = item;
+    dropdown.appendChild(option);
+  });
+}
+
+function changeColor(select) {
+  if (select.value) {
+    select.style.color = "black";
+  } else {
+    select.style.color = "gray";
+  }
+}
+
+function saveToLocalStorage() {
+  // Implement the function to save data to localStorage or send it to the server
+}
