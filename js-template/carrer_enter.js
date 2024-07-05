@@ -29,10 +29,10 @@ function saveToLocalStorage() {
     term_end,
   };
 
-  const existingData = localStorage.getItem("careerFormData");
+  let existingData = localStorage.getItem("careerFormData");
   existingData = existingData ? JSON.parse(existingData) : [];
 
-  // 新しいデータを追加
+  // 新しいデータを既存データに追加
   existingData.push(formData);
 
   // ローカルストレージに保存
