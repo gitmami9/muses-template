@@ -58,66 +58,67 @@
       <div id="enter_link">
         <div id="enter_belong">
           <h1>所属</h1>
-          <select name="university" onchange="changeColor(this)">
+          <select name="university" id="university"onchange="changeColor(this)">
             <option value="" selected hidden>大学・短大</option>
-            <option value="uni">大学</option>
-            <option value="jun">短大</option>
+            <option>大学</option>
+            <option>短大</option>
           </select> <br> 
-          <select name="faculty" onchange="changeColor(this)">
-            <option value="" selected hidden>学部・学科</option>
-            <option value="life">生活環境学部・生活環境学科</option>
-            <option value="inf">生活環境学部・情報メディア学科</option>
+          <select name="faculty"  id="faculty" onchange="changeColor(this)">
+            <option value=""selected hidden>学部・学科</option>
+            <option>生活環境学部・生活環境学科</option>
+            <option>生活環境学部・情報メディア学科</option>
           </select><br> 
-          <select name="grade" onchange="changeColor(this)">
+          <select name="grade" id="grade"onchange="changeColor(this)">
             <option value="" selected hidden>学年</option>
-            <option value="1">1年</option>
-            <option value="2">2年</option>
-            <option value="3">3年</option>
-            <option value="4">4年</option>
+            <option>1年</option>
+            <option>2年</option>
+            <option>3年</option>
+            <option>4年</option>
           </select><br> 
           </div>
 
           <div id="enter_content">
             <h1>内容</h1>
-            <select name="content" onchange="changeColor(this)">
+            <select name="content" id="content"onchange="changeColor(this)">
               <option value="" selected hidden>内容</option>
-              <option value="op">オープンカンパニー</option>
-              <option value="ca">キャリア支援</option>
-              <option value="ge">汎用的能力・専門活用型インターンシップ</option>
-              <option value="hi">高度専門型インターンシップ</option>
-              <option value="in">面接</option>
-              <option value="gd">グループディスカッション</option>
+              <option>オープンカンパニー</option>
+              <option>キャリア支援</option>
+              <option>汎用的能力・専門活用型インターンシップ</option>
+              <option>高度専門型インターンシップ</option>
+              <option>面接</option>
+              <option>グループディスカッション</option>
             </select><br> 
             </div>
 
             <div id="enter_industry">
               <h1>業種・職種</h1>
-              <input type="text" name="enterprise" placeholder="企業名" ><br> 
-              <select name="industry_type" onchange="changeColor(this)">
+              <input type="text" name="enterprise" id="enterprise" placeholder="企業名" ><br> 
+              <select name="industry_type" id="industry_type"
+              onchange="changeColor(this)">
                 <option value="" selected hidden>業種</option>
-                <option value="in1">業種1</option>
-                <option value="in2">業種2</option>
-                <option value="in3">業種3</option>
-                <option value="in4">業種4</option>
+                <option>業種1</option>
+                <option>業種2</option>
+                <option>業種3</option>
+                <option>業種4</option>
               </select><br> 
-              <select name="occupation" onchange="changeColor(this)">
+              <select name="occupation" id="occupation" onchange="changeColor(this)">
                 <option value="" selected hidden>職種</option>
-                <option value="oc1">職種1</option>
-                <option value="oc2">職種2</option>
-                <option value="oc3">職種3</option>
-                <option value="oc4">職種4</option>
+                <option>職種1</option>
+                <option>職種2</option>
+                <option>職種3</option>
+                <option>職種4</option>
               </select><br> 
               </div>
 
               <div id="enter_term">
                 <h1>期間</h1>
-                <input type="date" name="term_sta">
+                <input type="date"id="term_sta" name="term_sta">
                 ～
-                <input type="date" name="term_end">
+                <input type="date" id="term_end" name="term_end">
                 </div>   
     </main>
     <div id="bt">
-    <button id="entry" onclick="location.href='carrer_menu.html'">登録</button>
+    <button id="entry" onclick="saveToLocalStorage()">登録</button>
     <button id="back" onclick="location.href='carrer_menu.html'">戻る</button>
   </div>
     
