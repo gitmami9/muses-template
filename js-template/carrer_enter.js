@@ -104,7 +104,3 @@ function changeColor(select) {
     select.style.color = "gray";
   }
 }
-
-function saveToLocalStorage() {
-  // Implement the function to save data to localStorage or send it to the server
-}
