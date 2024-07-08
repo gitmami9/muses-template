@@ -43,6 +43,9 @@ function selectCompany(select) {
     );
     if (selectedData) {
       updateDisplay(selectedData); // 選択された企業名に対応するデータを表示更新
+      document.getElementById("job_info").style.display = "block"; // 内容を表示
+    } else {
+      document.getElementById("job_info").style.display = "none"; // 内容を非表示
     }
   }
 }
