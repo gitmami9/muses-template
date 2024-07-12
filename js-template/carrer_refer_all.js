@@ -18,11 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     let allData = [];
-    if (allData.length === 0) {
-      const response = await fetch("data.json");
-      const defaultData = await response.json();
-      allData = defaultData.List;
-    }
+
     // ローカルストレージからすべてのデータを取得
     for (let i = 1; i < localStorage.length; i++) {
       const key = localStorage.key(i);
@@ -38,7 +34,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
     }
-
+    const response = await fetch("data.json");
+    if (!response.ok) {
+      throw new Error("デフォルトデータの読み込みに失敗しました。");
+    }
+    const defaultData = await response.json();
+    allData.push(...defaultData.List);
     console.log("All data loaded:", allData); // データが正しく読み込まれたか確認
 
     // 期間の開始日と終了日を設定
