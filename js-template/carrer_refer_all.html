@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <!-- 文書タイプと言語 -->
     <meta charset="UTF-8" />
-    <!-- 文字エンコーディング -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ビューポート設定 -->
-    <title>MUSESトップ</title>
-    <!-- タイトル -->
+    <title>みんなの就活状況参照画面</title>
     <link href="carrer_refer_all.css" rel="stylesheet" />
-    <!-- スタイルシートのリンク -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
-      <!-- ヘッダー部分 -->
       <figure id="logo">
-        <!-- ロゴの画像 -->
-        <img src="img/logo.png" />
+        <img src="img/logo.png" alt="Logo" />
       </figure>
       <div id="user_name">
-        <img src="img/user_icon.png" /><span></span> さん
+        <img src="img/user_icon.png" alt="User Icon" /><span></span> さん
       </div>
-      <!-- ユーザー名表示 -->
       <div id="upper_menu">
-        <!-- 上部メニュー -->
         <div>
-          <img src="img/pc_site.png" /><br />
-          <!-- PC版アイコン -->
+          <img src="img/pc_site.png" alt="PC Site" /><br />
           PC版
         </div>
         <div>
-          <img src="img/timeout.png" /><br />
-          <!-- 残り時間アイコン -->
+          <img src="img/timeout.png" alt="Timeout" /><br />
           残り<br />約40分
         </div>
         <div>
           <a href="login.html">
-            <!-- ログアウトリンク -->
-            <img src="img/logout.png" /><br />
+            <img src="img/logout.png" alt="Logout" /><br />
             ログアウト
           </a>
         </div>
       </div>
-
       <div id="link">
-        <!-- リンク -->
-        <a href="index.html"><div> HOME &gt;</div></a>
-        <!-- HOMEリンク -->
-        <a href="carrer_top.html"><div>キャリア支援 &gt;</div></a>
+        <div>
+          <a href="index.html">HOME &gt;</a>
+        </div>
+        <div>
+          <a href="carrer_top.html">キャリア支援 &gt;</a>
+        </div>
       </div>
     </header>
     <main>
-      <h3>
-        <div id="con"></div>
-        <div id="aff"></div>
-        <div id="ind"></div>
-        <div id="date"></div>
-      </h3>
-      <ul class="chart">
-        <li>
-          <div class="bar"></div>
-          <p>月</p>
-        </li>
-        <li>
-          <div class="bar"></div>
-          <p>月</p>
-        </li>
-        <li>
-          <div class="bar"></div>
-          <p>月</p>
-        </li>
-
-        </li>
-      </ul>
+      <div id="search_parameters">
+        <div>学部・学科: <span id="search_department"></span></div>
+        <div>学年: <span id="search_grade"></span></div>
+        <div>内容: <span id="search_content"></span></div>
+        <div>業界: <span id="search_industry"></span></div>
+        <div>期間: <span id="search_term"></span></div>
+      </div>
+      <div id="graph_display">
+        <canvas id="myChart"></canvas>
+      </div>
       <a href="carrer_search.html">
-      <div class="circle">
-        <img class="icon" src="img/search_2_fill.png" alt="icon" />
-        <span>検索条件<br />変更</span>
-      </div></a>
+        <div class="circle">
+          <img class="icon" src="img/search_2_fill.png" alt="icon" />
+          <span>検索条件<br />変更</span>
+        </div>
+      </a>
     </main>
+
     <footer>
+      <div id="link"></div>
       <p>Information</p>
-      <!-- 情報 -->
       <div id="information"></div>
-      <!-- 情報コンテンツ -->
     </footer>
     <script src="carrer_refer_all.js"></script>
   </body>

@@ -183,63 +183,6 @@ main#top div {
   padding: 0.5rem; /*上下左右に0.5レムの余白を設定*/
 }
 
-main#top div:nth-child(1) {
-  /*main#top内の1番目のdiv要素に対するスタイル設定*/
-  background-color: #f4bab8; /*背景色を薄いピンクに設定*/
-}
-
-main#top div:nth-child(2) {
-  /*2番目*/
-  background-color: #f9dcbc; /*薄いオレンジ*/
-}
-
-main#top div:nth-child(3) {
-  /*3番目*/
-  font-size: 0.6rem; /*テキストのフォントサイズを0.6レムに設定*/
-  background-color: #f3bada; /*薄いラベンダー*/
-}
-
-main#top div:nth-child(4) {
-  /*4番目*/
-  background-color: #b55c92; /*ダークピンク*/
-}
-
-main#top div:nth-child(5) {
-  /*5番目*/
-  background-color: #bddafa; /*薄いブルー*/
-}
-
-main#top div:nth-child(6) {
-  /*6番目*/
-  background-color: #c6fddd; /*薄いグリーン*/
-}
-
-main#top div:nth-child(7) {
-  /*7番目*/
-  background-color: #e1febe; /*薄いイエロー*/
-}
-.chart {
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  margin-left: 30px;
-  margin-right: 25px;
-}
-li {
-  display: inline-block;
-  width: 100px;
-  text-align: center;
-}
-li p {
-  margin: 0;
-  position: absolute;
-  bottom: -30px;
-}
-.bar {
-  background-color: #4caf50;
-  width: 20px;
-  height: 100px;
-  margin-top: 10px;
-}
 main {
   position: relative;
   margin-bottom: 8rem;

@@ -1,4 +1,30 @@
-/* ドロップダウンリストを選択すると、カラーを黒くする */
+document.addEventListener("DOMContentLoaded", async () => {
+  const username = sessionStorage.username;
+
+  if (!username) {
+    window.alert("ログインしてください");
+    location.href = "login.html";
+  }
+
+  document.querySelector("#user_name span").textContent = username;
+
+  populateFormFromLocalStorage(username);
+  await fetchDataAndPopulateDropdowns();
+});
+
+function populateFormFromLocalStorage(username) {
+  const data = JSON.parse(localStorage.getItem(username));
+  if (data) {
+    document.querySelector('[name="faculty"]').value = data.faculty || "";
+    document.querySelector('[name="grade"]').value = data.grade || "";
+    document.querySelector('[name="content"]').value = data.content || "";
+    document.querySelector('[name="industry_type"]').value =
+      data.industry_type || "";
+    document.querySelector('[name="term_start"]').value = data.term_start || "";
+    document.querySelector('[name="term_end"]').value = data.term_end || "";
+  }
+}
+
 function changeColor(element) {
   if (element.value == "") {
     element.style.color = "";
@@ -7,71 +33,94 @@ function changeColor(element) {
   }
 }
 
+function handleDateChange(type) {
+  const startDateInput = document.querySelector('input[name="term_start"]');
+  const endDateInput = document.querySelector('input[name="term_end"]');
+
+  if (type === "start") {
+    const startDate = new Date(startDateInput.value + "-01");
+    const endDate = new Date(startDate);
+    endDate.setMonth(endDate.getMonth() + 5);
+    if (endDate.getDate() !== startDate.getDate()) {
+      endDate.setDate(0);
+    }
+    endDateInput.value = endDate.toISOString().slice(0, 7);
+  } else if (type === "end") {
+    const endDate = new Date(endDateInput.value + "-01");
+    const startDate = new Date(endDate);
+    startDate.setMonth(startDate.getMonth() - 5);
+    if (startDate.getDate() !== endDate.getDate()) {
+      startDate.setDate(0);
+    }
+    startDateInput.value = startDate.toISOString().slice(0, 7);
+  }
+}
+
 document.getElementById("entry").addEventListener("click", function () {
-  const grade = document.querySelector('select[name="grade"]').value;
-  const faculty = document.querySelector('select[name="faculty"]').value;
-  const content = document.querySelector('select[name="content"]').value;
-  const industryType = document.querySelector(
-    'select[name="industry_type"]'
-  ).value;
-  const termSta = document.querySelector('input[name="term_sta"]').value;
+  const termStart = document.querySelector('input[name="term_start"]').value;
   const termEnd = document.querySelector('input[name="term_end"]').value;
 
+  if (!termStart || !termEnd) {
+    alert("期間を選択してください。");
+    return;
+  }
+
+  const startDate = new Date(termStart + "-01");
+  const endDate = new Date(termEnd + "-01");
+
+  if (endDate <= startDate) {
+    alert("終了日は開始日より後に設定してください。");
+    return;
+  }
+
+  const sixMonthsLater = new Date(startDate);
+  sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
+  if (sixMonthsLater.getDate() !== startDate.getDate()) {
+    sixMonthsLater.setDate(0);
+  }
+  if (endDate > sixMonthsLater) {
+    alert("期間は6か月以内に設定してください。");
+    return;
+  }
+
   const searchParams = new URLSearchParams({
-    grade,
-    faculty,
-    content,
-    industryType,
-    termSta,
+    department:
+      document.querySelector('select[name="faculty"]').value || "指定なし",
+    grade: document.querySelector('select[name="grade"]').value || "指定なし",
+    content:
+      document.querySelector('select[name="content"]').value || "指定なし",
+    industry:
+      document.querySelector('select[name="industry_type"]').value ||
+      "指定なし",
+    termStart,
     termEnd,
   });
 
   location.href = `carrer_refer_all.html?${searchParams.toString()}`;
 });
 
-document.addEventListener("DOMContentLoaded", async () => {
-  // セッションストレージからユーザー名を取得
-  const username = sessionStorage.username;
-  // ユーザー名が存在しない場合はログインページにリダイレクト
-  if (!username) {
-    window.alert("ログインしてください");
-    location.href = "login.html";
-  }
-  // ユーザー名を表示する要素にユーザー名をセット
-  document.querySelector("#user_name span").textContent = username;
+function populateDropdown(name, options) {
+  const selectElement = document.querySelector(`select[name="${name}"]`);
+  options.forEach((option) => {
+    const optionElement = document.createElement("option");
+    optionElement.textContent = option;
+    selectElement.appendChild(optionElement);
+  });
+}
 
-  // data.jsonを読み込む
+async function fetchDataAndPopulateDropdowns() {
   try {
     const response = await fetch("data.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.json();
 
-    // 学部・学科のドロップダウンを更新
-    const facultySelect = document.querySelector('select[name="faculty"]');
-    data.faculty.forEach((faculty) => {
-      const option = document.createElement("option");
-      option.value = faculty;
-      option.textContent = faculty;
-      facultySelect.appendChild(option);
-    });
-
-    // 内容のドロップダウンを更新
-    const contentSelect = document.querySelector('select[name="content"]');
-    data.content.forEach((content) => {
-      const option = document.createElement("option");
-      option.value = content;
-      option.textContent = content;
-      contentSelect.appendChild(option);
-    });
-
-    // 業種のドロップダウンを更新
-    const jobSelect = document.querySelector('select[name="industry_type"]');
-    data.job.forEach((job) => {
-      const option = document.createElement("option");
-      option.value = job;
-      option.textContent = job;
-      jobSelect.appendChild(option);
-    });
+    populateDropdown("faculty", data.faculty);
+    populateDropdown("content", data.content);
+    populateDropdown("industry_type", data.job);
   } catch (error) {
-    console.error("Error loading data.json:", error);
+    console.error("Error loading data:", error);
+    alert("データの読み込み中にエラーが発生しました。");
   }
-});
+}
