@@ -36,9 +36,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (allData.length === 0) {
-      throw new Error("ローカルストレージからデータを取得できませんでした。");
+      const response = await fetch("data.json");
+      const defaultData = await response.json();
+      allData = defaultData.List;
     }
-
     console.log("All data loaded:", allData); // データが正しく読み込まれたか確認
 
     // 期間の開始日と終了日を設定
