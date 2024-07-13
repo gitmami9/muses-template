@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await saveToLocalStorage(username); // データ保存を非同期で実行
 
     // データ保存後の処理
-    alert("データが保存されました");
+    alert("保存されました");
     location.href = "carrer_menu.html";
   });
 });
