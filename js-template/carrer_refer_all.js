@@ -171,6 +171,7 @@ function drawChart(labels, chartData) {
             display: true,
             text: "期間",
           },
+          grid: { display: false },
         },
       },
     },
