@@ -83,7 +83,7 @@ function updateDisplay(data) {
     document.getElementById("occupation").textContent = data.occupation;
   } else {
     document.getElementById("industry_type").textContent = "";
-    document.getElementById("record").textContent = "記録がありません";
+    document.getElementById("record").textContent = "";
     document.getElementById("term").textContent = "";
     document.getElementById("occupation").textContent = "";
   }
