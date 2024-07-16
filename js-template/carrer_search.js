@@ -121,6 +121,5 @@ async function fetchDataAndPopulateDropdowns() {
     populateDropdown("industry_type", data.job);
   } catch (error) {
     console.error("Error loading data:", error);
-    alert("データの読み込み中にエラーが発生しました。");
   }
 }

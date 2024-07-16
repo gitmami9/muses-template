@@ -46,7 +46,7 @@ function populateDropdown(data) {
     opt.textContent = "記録がありません";
     select.appendChild(opt);
     select.disabled = true; // ドロップダウンを無効化
-    updateDisplay(null); // データがない場合は「活動記録がありません」を表示
+    updateDisplay(null); // データがない場合は「記録がありません」を表示
   }
 }
 
@@ -67,7 +67,7 @@ function selectCompany(select) {
       updateDisplay(selectedData); // 選択された企業名に対応するデータを表示更新
       document.getElementById("job_info").style.display = "block"; // 内容を表示
     } else {
-      updateDisplay(null); // 選択された企業がない場合は「活動記録がありません」を表示
+      updateDisplay(null); // 選択された企業がない場合は「記録がありません」を表示
       document.getElementById("job_info").style.display = "none"; // 内容を非表示
     }
   }
@@ -83,7 +83,7 @@ function updateDisplay(data) {
     document.getElementById("occupation").textContent = data.occupation;
   } else {
     document.getElementById("industry_type").textContent = "";
-    document.getElementById("record").textContent = "活動記録がありません";
+    document.getElementById("record").textContent = "記録がありません";
     document.getElementById("term").textContent = "";
     document.getElementById("occupation").textContent = "";
   }

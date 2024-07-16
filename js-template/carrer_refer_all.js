@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     drawChart(labels, chartData);
   } catch (error) {
     console.error("Error loading data:", error);
-    alert("データの読み込み中にエラーが発生しました。");
   }
 });
 
